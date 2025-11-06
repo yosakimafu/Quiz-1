@@ -8,24 +8,26 @@ class Enemys {
     }
 
     attack() {
-        return `enemy attack, attack = ${this.attackPower}`
+        return console.log(`enemy attack, attack = ${this.attackPower}`);
     }
 
     walk() {
-        return `enemy walk, speed = ${this.speed}`
+        return console.log(`enemy walk, speed = ${this.speed}`);
     }
 
     dash() {
-        return `enemy dash, speed = 5`
+        return console.log(`enemy dash, speed = ${this.speed * 2.5}`);
     }
 
     getInformation() {
-        return  `nama enemy: ${this.name} memiliki speed=${this.speed}, attack=${this.attackPower}, health=${this.health}, dan defend=${this.defend}`
+        return console.log(
+            `nama enemy: ${this.name} memiliki speed=${this.speed}, attack=${this.attackPower}, health=${this.health}, dan defend=${this.defend}`
+        );
     }
 }
 
-const enemy = new Enemys("Goblin");
-console.log(enemy.attack());
-console.log(enemy.walk());
-console.log(enemy.dash());
-console.log(enemy.getInformation());
+let enemy1 = new Enemys("Goblin");
+enemy1.attack();
+enemy1.walk();
+enemy1.dash();
+enemy1.getInformation();
